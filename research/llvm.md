@@ -52,3 +52,7 @@ I already have them on the machine but maybe you want to install also the "high-
 Then you can change you destination directory.
 I would leave the other flags like this except for the `-DLLVM_USE_LINKER=lld`, if you don't have `lld` installed you cant link the project with it
 - cmake -S llvm -B build -G Ninja -DLLVM_ENABLE_PROJECTS='polly' -DCMAKE_BUILD_TYPE=RelWithDebInfo  -DLLVM_ENABLE_ASSERTIONS=ON -DLLVM_USE_LINKER=lld
+
+(But why do i have to build everything? Maybe the first time you can build everything but than just go into the llvm folder and build just that?)
+
+https://wisesciencewise.wordpress.com/2022/10/03/steps-to-generate-llvm-call-flow-graphcfg/
