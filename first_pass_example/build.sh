@@ -7,6 +7,6 @@ cd build
 cmake ..
 make
 
-cp ./skeleton/SkeletonPass.* ./example/
-
 cd ..
+cp ./build/skeleton/SkeletonPass.* ./example/
+
