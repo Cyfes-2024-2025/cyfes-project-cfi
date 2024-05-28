@@ -2,6 +2,7 @@
 #include "llvm/Passes/PassBuilder.h"
 #include "llvm/Passes/PassPlugin.h"
 #include "llvm/Support/raw_ostream.h"
+#include <llvm/IR/Instructions.h>
 
 using namespace llvm;
 
@@ -9,11 +10,19 @@ namespace {
 
 struct SkeletonPass : public PassInfoMixin<SkeletonPass> {
     PreservedAnalyses run(Module &M, ModuleAnalysisManager &AM) {
-        for (auto &F : M.functions()) {
-            for (auto &bbb : F) {
-                errs() << "I saw something called " << bbb.getName() << "!\n";
-                for (auto &I : bbb) {
-                    errs() << "I saw " << I.getName() << "!\n";
+        for (auto &function : M.functions()) {
+            for (auto &block : function) {
+                errs() << "I saw a block called \"" << block.getName() << "\"!\n";
+                for (auto &instruction : block) {
+                    errs() << "I saw an instruction with opcode \"" << instruction.getOpcodeName() << "\"!\n";
+                    if (auto *storeOp = dyn_cast<StoreInst>(&instruction)) {
+                        errs() << "  got a store" << "\n";
+                        // auto ptrOperand = storeOp.get
+
+
+
+                    }
+
                 }
             }
 
