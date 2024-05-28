@@ -3,8 +3,8 @@
 
 ## How to build
 
+This will handle everything, and it supports incremental compilation
 ```bash
-./build.sh
 cd example
 make
 ```

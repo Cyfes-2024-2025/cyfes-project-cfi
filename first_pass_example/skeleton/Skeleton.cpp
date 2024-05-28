@@ -16,7 +16,7 @@ struct SkeletonPass : public PassInfoMixin<SkeletonPass> {
                 for (auto &instruction : block) {
                     errs() << "I saw an instruction with opcode \"" << instruction.getOpcodeName() << "\"!\n";
                     if (auto *storeOp = dyn_cast<StoreInst>(&instruction)) {
-                        errs() << "  got a store" << "\n";
+                        errs() << "  Got a store instruction" << "\n";
                         // auto ptrOperand = storeOp.get
 
 
