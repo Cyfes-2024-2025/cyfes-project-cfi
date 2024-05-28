@@ -1,12 +1,16 @@
 #!/bin/bash
 
-rm -rf ./build
+if [ ! -d build ]; then
+    mkdir build
+    cd build
+    cmake ..
+    cd ..
+fi
 
-mkdir build
 cd build
-cmake ..
 make
-
 cd ..
-cp ./build/skeleton/SkeletonPass.* ./example/
 
+cp ./build/skeleton/SkeletonPass.* ./example/
+cd example
+make
