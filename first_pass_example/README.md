@@ -1,4 +1,4 @@
-# Comipler Pass Example
+# Compiler Pass Example
 
 
 ## How to build
