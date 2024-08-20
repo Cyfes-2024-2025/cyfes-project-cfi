@@ -77,4 +77,12 @@ cmake -G Ninja -DCMAKE_BUILD_TYPE="Debug" \
 -DLLVM_ENABLE_PROJECTS="clang;lld" \
 -DLLVM_OPTIMIZED_TABLEGEN=TRUE ../llvm
 cmake --build .
-cmake --build . --target installx
+cmake --build . --target install
+
+
+cmake -G Ninja -DCMAKE_BUILD_TYPE="Debug" \
+-DCMAKE_INSTALL_PREFIX=/Users/lorenzo/tmp/llvm_test_build \
+-DLLVM_ENABLE_PROJECTS="clang;lld" \
+-DLLVM_OPTIMIZED_TABLEGEN=TRUE ../llvm
+cmake --build .
+cmake --build . --target install
