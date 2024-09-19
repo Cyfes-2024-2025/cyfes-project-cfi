@@ -1,0 +1,12 @@
+[submodule "buildroot"]
+	path = buildroot
+	url = git@github.com:Cyfes-2024-2025/buildroot.git
+	shallow = true
+[submodule "qemu"]
+	path = qemu
+	url = git@github.com:Cyfes-2024-2025/qemu.git
+	shallow = true
+[submodule "llvm-project-ptrauth"]
+	path = llvm-project-ptrauth
+	url = git@github.com:Cyfes-2024-2025/llvm-project-ptrauth.git
+	shallow = true
