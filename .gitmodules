@@ -1,9 +1,0 @@
-[submodule "llvm-project"]
-	path = llvm-project
-	url = https://github.com/llvm/llvm-project
-	branch = release/18.x
-[submoduel "llvm-project-ptrauth"]
-	shallow = true
-[submodule "llvm-project-ptrauth"]
-	path = llvm-project-ptrauth
-	url = git@github.com:Daemondeal/llvm-project-ptrauth.git
