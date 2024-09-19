@@ -14,7 +14,7 @@ lib.o: lib.c
 	$(CROSS_CC) ./lib.c -c
 
 demo.o: demo.c
-	$(CLANG) -O1 --target=arm64e
+	$(CLANG) -O1 --target=arm64e -c ./demo.c
 
 clean:
 	rm -r *.o demo
